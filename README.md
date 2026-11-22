@@ -20,7 +20,16 @@ talks to the board directly over its USB serial port.
 
 ## Installation
 
-### HACS (recommended)
+### Marketplace (Home Assistant 2026.11 and later, recommended)
+
+1. Go to **Settings → Marketplace**.
+2. Select **Add from link** (top right), enter `cedric222/ha-kmtronic-usb` and choose the
+   **Integration** type if asked. The Marketplace needs a GitHub connection for custom
+   repositories.
+3. Open **KMTronic USB Relay** and install it. Updates are then offered like for any other
+   integration.
+
+### HACS (Home Assistant 2026.10 and earlier)
 
 1. HACS → ⋮ → *Custom repositories* → add `https://github.com/cedric222/ha-kmtronic-usb`,
    category *Integration*.
