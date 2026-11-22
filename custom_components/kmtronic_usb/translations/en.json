@@ -1,0 +1,178 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Set up a KMTronic USB relay board",
+        "description": "Select the serial port of the board. Prefer the /dev/serial/by-id/... path, it does not change across reboots.",
+        "data": {
+          "port": "Serial port",
+          "relay_count": "Number of relays"
+        },
+        "data_description": {
+          "port": "Serial port of the board, for example /dev/serial/by-id/usb-KMtronic_Ltd._USB_8_Relays-if00.",
+          "relay_count": "Number of relays on the board."
+        }
+      },
+      "usb_confirm": {
+        "title": "KMTronic USB relay board",
+        "description": "Do you want to set up {name} on {port}?"
+      }
+    },
+    "error": {
+      "cannot_connect": "The board did not answer on this port. Check the cable and that no other program (such as the old MQTT add-on) is using it."
+    },
+    "abort": {
+      "already_configured": "This board is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Relays",
+        "description": "Choose how each relay is exposed in Home Assistant. Entities can then be renamed and given icons from their settings.",
+        "sections": {
+          "relay_1": {
+            "name": "Relay 1",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_2": {
+            "name": "Relay 2",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_3": {
+            "name": "Relay 3",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_4": {
+            "name": "Relay 4",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_5": {
+            "name": "Relay 5",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_6": {
+            "name": "Relay 6",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_7": {
+            "name": "Relay 7",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          },
+          "relay_8": {
+            "name": "Relay 8",
+            "data": {
+              "type": "Type",
+              "inverted": "Inverted (NC wiring)",
+              "pulse_duration": "Pulse duration"
+            },
+            "data_description": {
+              "type": "Switch or light: stays on/off. Button: impulse (gate, garage door). Disabled: no entity.",
+              "inverted": "Enable when the load is wired on the normally closed contact: the entity is on when the relay is released.",
+              "pulse_duration": "Buttons only: how long the relay stays active on each press."
+            }
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "relay_type": {
+      "options": {
+        "switch": "Switch",
+        "light": "Light",
+        "button": "Button (impulse)",
+        "disabled": "Disabled"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "relay": {
+        "name": "Relay {relay}"
+      }
+    },
+    "light": {
+      "relay": {
+        "name": "Relay {relay}"
+      }
+    },
+    "switch": {
+      "relay": {
+        "name": "Relay {relay}"
+      }
+    }
+  },
+  "exceptions": {
+    "update_failed": {
+      "message": "Error communicating with the relay board: {error}"
+    },
+    "command_failed": {
+      "message": "Failed to switch relay {relay}: {error}"
+    }
+  }
+}

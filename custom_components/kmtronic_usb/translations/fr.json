@@ -1,0 +1,178 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Configurer une carte relais KMTronic USB",
+        "description": "Sélectionnez le port série de la carte. Préférez le chemin /dev/serial/by-id/..., il ne change pas au redémarrage.",
+        "data": {
+          "port": "Port série",
+          "relay_count": "Nombre de relais"
+        },
+        "data_description": {
+          "port": "Port série de la carte, par exemple /dev/serial/by-id/usb-KMtronic_Ltd._USB_8_Relays-if00.",
+          "relay_count": "Nombre de relais de la carte."
+        }
+      },
+      "usb_confirm": {
+        "title": "Carte relais KMTronic USB",
+        "description": "Voulez-vous configurer {name} sur {port} ?"
+      }
+    },
+    "error": {
+      "cannot_connect": "La carte ne répond pas sur ce port. Vérifiez le câble et qu'aucun autre programme (comme l'ancien add-on MQTT) ne l'utilise."
+    },
+    "abort": {
+      "already_configured": "Cette carte est déjà configurée."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Relais",
+        "description": "Choisissez comment chaque relais est exposé dans Home Assistant. Les entités peuvent ensuite être renommées et recevoir une icône depuis leurs paramètres.",
+        "sections": {
+          "relay_1": {
+            "name": "Relais 1",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_2": {
+            "name": "Relais 2",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_3": {
+            "name": "Relais 3",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_4": {
+            "name": "Relais 4",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_5": {
+            "name": "Relais 5",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_6": {
+            "name": "Relais 6",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_7": {
+            "name": "Relais 7",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          },
+          "relay_8": {
+            "name": "Relais 8",
+            "data": {
+              "type": "Type",
+              "inverted": "Inversé (câblage NF)",
+              "pulse_duration": "Durée d'impulsion"
+            },
+            "data_description": {
+              "type": "Interrupteur ou lumière : reste allumé/éteint. Bouton : impulsion (portail, porte de garage). Désactivé : aucune entité.",
+              "inverted": "À activer quand la charge est câblée sur le contact normalement fermé : l'entité est allumée quand le relais est au repos.",
+              "pulse_duration": "Boutons uniquement : durée pendant laquelle le relais reste actif à chaque appui."
+            }
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "relay_type": {
+      "options": {
+        "switch": "Interrupteur",
+        "light": "Lumière",
+        "button": "Bouton (impulsion)",
+        "disabled": "Désactivé"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "relay": {
+        "name": "Relais {relay}"
+      }
+    },
+    "light": {
+      "relay": {
+        "name": "Relais {relay}"
+      }
+    },
+    "switch": {
+      "relay": {
+        "name": "Relais {relay}"
+      }
+    }
+  },
+  "exceptions": {
+    "update_failed": {
+      "message": "Erreur de communication avec la carte relais : {error}"
+    },
+    "command_failed": {
+      "message": "Impossible de commuter le relais {relay} : {error}"
+    }
+  }
+}

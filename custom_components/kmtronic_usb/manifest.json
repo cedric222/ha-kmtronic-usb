@@ -1,0 +1,19 @@
+{
+  "domain": "kmtronic_usb",
+  "name": "KMTronic USB Relay",
+  "codeowners": ["@cedric222"],
+  "config_flow": true,
+  "documentation": "https://github.com/cedric222/ha-kmtronic-usb",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/cedric222/ha-kmtronic-usb/issues",
+  "requirements": ["pyserial>=3.5"],
+  "usb": [
+    {
+      "vid": "04D8",
+      "pid": "F55E",
+      "manufacturer": "*kmtronic*"
+    }
+  ],
+  "version": "0.1.0"
+}
