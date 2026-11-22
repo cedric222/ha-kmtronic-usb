@@ -20,8 +20,6 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
-          # Remove once the icon is submitted to https://github.com/home-assistant/brands
-          ignore: brands
 
   ruff:
     runs-on: ubuntu-latest
