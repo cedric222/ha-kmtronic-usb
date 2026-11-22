@@ -7,7 +7,7 @@
   "integration_type": "device",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/cedric222/ha-kmtronic-usb/issues",
-  "requirements": ["pyserial>=3.5"],
+  "requirements": [],
   "usb": [
     {
       "vid": "04D8",
